@@ -1,5 +1,5 @@
 import React from 'react'
-import {Routes , Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Login from './user/AuthLayout'
 import Registration from './user/Registration'
 import Home from './user/Home/Home'
@@ -9,23 +9,24 @@ import Lform from './components/Login/Lform'
 import AuthLayout from './user/AuthLayout'
 import Rform from './components/Registration/Rform'
 import Fform from './components/Forgot/Fform'
+import '../src/App.css'
 
 
 const App = () => {
   return (
 
 
-<Routes>
-      <Route path='/home/*'element={<Home/>}/>
-      <Route path="/" element={<AuthLayout children={<Lform />} />}/>
-      <Route path="/registration" element={<AuthLayout children={<Rform />} />}/>
-      
-      <Route path="/forgot" element={<AuthLayout children={<Fform/>}/>}/>
+    <Routes>
+      <Route path='/home/*' element={<Home />} />
+      <Route path="/" element={<AuthLayout children={<Lform />} />} />
+      <Route path="/registration" element={<AuthLayout children={<Rform />} />} />
 
-      <Route element={<Home/>}>
-        <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path="/forgot" element={<AuthLayout children={<Fform />} />} />
+
+      <Route element={<Home />}>
+        <Route path='/dashboard' element={<Dashboard />} />
       </Route>
-</Routes>
+    </Routes>
 
   )
 }
