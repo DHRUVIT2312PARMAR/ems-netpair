@@ -21,29 +21,49 @@ const Dashboard = () => {
         <PieChartSimple av={20} ap={20} ar={20} />
 
       </div>
-      <div className='flex item-center justify-center p-5 bg-red-200'>
-        <table className='table-auto bg-white rounded-t-xl'>
-          <thead>
-            <tr>
-              <th>Employee</th>
-              <th>Dept</th>
-              <th>Status</th>
-              <th>Check-in</th>
-              <th>Mode</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Dhruvitkumar</td>
-              <td>IT</td>
-              <td>Present</td>
-              <td>09:27</td>
-              <td>Offline</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div className="flex items-center justify-center p-5">
+        <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="px-6 py-4 border-b">
+            <h2 className="text-xl font-semibold text-gray-800">
+              Employee Attendance
+            </h2>
+          </div>
 
+          <div className="overflow-x-auto">
+            <table className="w-full table-auto text-left">
+              <thead className="bg-gray-100 text-gray-700 uppercase text-sm">
+                <tr>
+                  <th className="px-6 py-3">Employee</th>
+                  <th className="px-6 py-3">Dept</th>
+                  <th className="px-6 py-3">Status</th>
+                  <th className="px-6 py-3">Check-in</th>
+                  <th className="px-6 py-3">Mode</th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y">
+                <tr className="hover:bg-gray-50 transition">
+                  <td className="px-6 py-4 font-medium text-gray-900">
+                    Dhruvitkumar
+                  </td>
+                  <td className="px-6 py-4 text-gray-700">IT</td>
+                  <td className="px-6 py-4">
+                    <span className="px-3 py-1 text-sm rounded-full bg-green-100 text-green-700 font-medium">
+                      Present
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-gray-700">09:27 AM</td>
+                  <td className="px-6 py-4">
+                    <span className="px-3 py-1 text-sm rounded-md bg-blue-100 text-blue-700">
+                      Offline
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
